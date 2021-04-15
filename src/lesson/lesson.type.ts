@@ -1,9 +1,9 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Field, ID, ObjectType } from '@nestjs/graphql';
 
 @ObjectType('Lesson')
 export class LessonType {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // eslint-disable-next-line prettier/prettier
   @Field(type => ID)
   id: string;
 
