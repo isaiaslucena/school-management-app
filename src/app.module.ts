@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LessonEntity } from './lesson/lesson.entity';
 import { LessonModule } from './lesson/lesson.module';
+import { StudentEntity } from './student/student.entity';
 import { StudentModule } from './student/student.module';
 
 @Module({
@@ -12,7 +13,7 @@ import { StudentModule } from './student/student.module';
       url: 'mongodb://localhost/school',
       synchronize: true,
       useUnifiedTopology: true,
-      entities: [LessonEntity],
+      entities: [LessonEntity, StudentEntity],
     }),
     GraphQLModule.forRoot({
       autoSchemaFile: true,
