@@ -9,7 +9,7 @@ export class LessonService {
   constructor(
     @InjectRepository(LessonEntity)
     private lessonRepository: Repository<LessonEntity>,
-  ) { }
+  ) {}
 
   async getLesson(id: string): Promise<LessonEntity> {
     return this.lessonRepository.findOne({ id });
