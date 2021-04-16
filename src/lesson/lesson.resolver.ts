@@ -9,12 +9,12 @@ import { LessonType } from './lesson.type';
 export class LessonResolver {
   constructor(private lessonService: LessonService) {}
 
-  @Query(returns => [LessonType])
+  @Query(type => [LessonType])
   lessons() {
     return this.lessonService.getLessons();
   }
 
-  @Query(returns => [LessonType])
+  @Query(type => LessonType)
   lesson(@Args('id') id: string) {
     return this.lessonService.getLesson(id);
   }
