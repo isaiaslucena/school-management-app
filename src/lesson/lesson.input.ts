@@ -3,12 +3,12 @@ import { IsDateString, MinLength } from 'class-validator';
 
 @InputType()
 export class CreateLessonInput {
-  @MinLength(4)
   @Field()
+  @MinLength(4)
   name: string;
 
-  @IsDateString()
   @Field()
+  @IsDateString()
   startDate: string;
 
   @Field()
