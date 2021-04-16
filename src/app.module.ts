@@ -10,7 +10,7 @@ import { StudentModule } from './student/student.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mongodb',
-      url: 'mongodb://localhost/school',
+      url: process.env.MONGO_URL,
       synchronize: true,
       useUnifiedTopology: true,
       entities: [LessonEntity, StudentEntity],
